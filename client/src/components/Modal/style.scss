@@ -1,0 +1,44 @@
+.modal-content {
+	padding: 25px 32px;
+	&-title {
+		font-size: 24px;
+		@apply font-medium;
+	}
+	form {
+		@apply mt-3;
+		label {
+			font-size: 14px;
+			line-height: 19px;
+			color: #4F4F4F;
+			@apply flex flex-col font-medium mb-5;
+			input {
+				margin-top: 10px;
+				border: 1px solid #4F4F4F;
+				border-radius: 12px;
+				padding: 10px 20px;
+				height: auto;
+				box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.1);
+				@apply outline-none transition-shadow duration-150;
+				&:focus {
+					@apply shadow-outline border-blue-500;
+				}
+				@screen md {
+					padding: 18px;
+					height: 55px;
+				}
+			}
+			input::placeholder {
+				color: #bdbdbd;
+			}
+		}
+		.btn-reset {
+			font-size: 14px;
+			color: #bdbdbd;
+			margin-right: 24px;
+			@apply font-medium outline-none;
+		}
+	}
+	&-footer {
+		@apply flex items-center justify-end;
+	}
+}
